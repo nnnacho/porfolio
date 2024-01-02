@@ -1,57 +1,52 @@
 ---
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import '@fontsource-variable/onest'
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import "@fontsource-variable/onest";
 
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
-const {description, title } = Astro.props;
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+
+  <body>
+	<div class="fixed-background"></div>
+    <Header />
+    <slot />
+    <Footer />
 	
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-
-	<body class="relative">
-		<div class="fixed-background"></div>	
-		<Header />
-		<slot />
-		<Footer />
-	</body>
-
+  </body>
 </html>
 <style is:global>
-	:root {
-	color-scheme: light dark;
-	}
-	html {
-		font-family: "Onest Variable", system-ui, sans-serif;
-		scroll-behavior: smooth;
-	}
-	body{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		min-height: 100vh;
-		overflow-x: hidden;
-	}
-	@media (prefers-reduced-motion: reduce){
-		html{
-			scroll-behavior: auto;
-		}
-	}
-	.fixed-background {
+  :root {
+    color-scheme: light dark;
+  }
+  html {
+    font-family: "Onest Variable", system-ui, sans-serif;
+    scroll-behavior: smooth;
+	overflow-x: hidden;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    
+  }
+  .fixed-background {
             position: fixed; /* Hace que el div sea fijo en la ventana */
             top: 0;
             left: 0;
@@ -61,5 +56,9 @@ const {description, title } = Astro.props;
             background-size: 20px 20px;
             z-index: -2;
         }
-
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
 </style>
