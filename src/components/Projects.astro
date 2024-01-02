@@ -1,0 +1,86 @@
+---
+import NETIcon from "../components/icons/.NET.astro";
+import TailwindIcon from "../components/icons/TailwindCss.astro";
+import SqlSeverIcon from "../components/icons/SqlServer.astro";
+
+const TAGS = {
+  NET: {
+    name: ".NET",
+    class: "bg-purple-500 text-white",
+    icon: NETIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: TailwindIcon,
+  },
+  SqlServer: {
+    name: "Sql Server",
+    class: "bg-gray-200 text-black",
+    icon: SqlSeverIcon,
+  },
+};
+const PROJECTS = [
+  {
+    tittle: "Gestor Escolar",
+    description:
+      "Proyecto realizado con la arquitectura MVC en ASP.NET, Las principales funcionalidades del sistema son el ingreso de datos y la modificación de estos mediante formularios.",
+    link: "http://ignacioarmijo-001-site1.anytempurl.com/",
+    github: "https://github.com/nnnacho/LiceoSDL",
+    image: "/imgs/GestorEscolar.webp",
+    tags: [TAGS.NET, TAGS.TAILWIND, TAGS.SqlServer],
+  },
+];
+---
+
+<section class="py-20">
+  <div class="max-w-xl mx-auto">
+    <div class="text-center">
+      <div class="relative flex flex-col items-center">
+        <div
+          class="absolute hidden md:block mt-2 -top-14 text-[80px] text-gray-400 font-bold opacity-10">
+          Proyectos
+        </div>
+        <h1
+          class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-sky-100 to-sky-600">
+          Proyectos
+        </h1>
+        <div class="flex mt-1 mb-10 overflow-hidden rounded w-14">
+          <div class="flex-1 h-2 bg-sky-200"></div>
+          <div class="flex-1 h-2 bg-sky-400"></div>
+          <div class="flex-1 h-2 bg-sky-600"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ol class="flex justify-center flex-row">
+    {
+      PROJECTS.map(({ tittle, image, description, link, github, tags }) => (
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-2">
+          <img class="rounded-t-lg" src={image} alt="" />
+          <div class="p-5">
+            <h5 class="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
+              {tittle}
+            </h5>
+  
+            <p class="mb-3 font-normal text-gray-700 opacity-80 dark:text-gray-400">
+              {description}
+            </p>
+            <ul class="flex gap-x-2 flex-row mb-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}>
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))
+    }
+  </ol>
+</section>
+
