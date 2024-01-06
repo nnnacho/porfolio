@@ -2,6 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import {PROJECTS} from "../data/projects.js"
 import { InferencePriority, resolveTypeReferenceDirective } from "typescript";
+export function getStaticPaths() {
+  return [
+    {params: {project: 'gestor-escolar'}}
+  ];
+}
 const {project} = Astro.params
 const info = PROJECTS.find(x => x.id == project)
 if(!info){

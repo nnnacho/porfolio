@@ -29,16 +29,5 @@ export const PROJECTS = [
       github: "https://github.com/nnnacho/LiceoSDL",
       image: "/imgs/GestorEscolar.webp",
       tags: [TAGS.NET, TAGS.TAILWIND, TAGS.SqlServer],
-    },
-    {
-        id:'easy-sala',
-        tittle: "EasySala",
-        description:
-          "Proyecto realizado con la arquitectura MVC en ASP.NET, Las principales funcionalidades del sistema son el ingreso de datos y la modificación de estos mediante formularios.",
-        descriptioncomplete: 'Testing',
-        link: "http://ignacioarmijo-001-site1.anytempurl.com/",
-        github: "https://github.com/nnnacho/LiceoSDL",
-        image: "/imgs/GestorEscolar.webp",
-        tags: [TAGS.NET, TAGS.TAILWIND, TAGS.SqlServer],
-      },
+    }
   ];
