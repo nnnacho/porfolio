@@ -4,6 +4,9 @@ import {PROJECTS} from "../data/projects.js"
 import { InferencePriority, resolveTypeReferenceDirective } from "typescript";
 const {project} = Astro.params
 const info = PROJECTS.find(x => x.id == project)
+if(!info){
+return Astro.redirect("Index")
+}
 ---
 <Layout title={`Proyecto ${info.tittle}`}>
     <main>
