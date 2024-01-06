@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {PROJECTS} from "../data/projects.js"
+import { InferencePriority, resolveTypeReferenceDirective } from "typescript";
+const {project} = Astro.params
+const info = PROJECTS.find(x => x.id == project)
+---
+<Layout title={`Proyecto ${info.tittle}`}>
+    <main>
+        <section class="w-full lg:w-[780px] mx-auto sm:px-10 px-6">
+            <h1
+        class="text-white text-5xl font-bold flex flex-col gap-x-4 pb-10 items-center">
+        {info.tittle}</h1>
+        <img class="rounded-t-lg" src={info.image} alt="" />
+        <h2 class="text-white text-3xl font-bold py-5 items-start">Descripción</h2>
+        <p class="text-left rtl:text-right text-gray-300 opacity-90 dark:text-gray-400">
+            {info.descriptioncomplete}
+        </p>
+        </section>
+    </main>
+</Layout>
