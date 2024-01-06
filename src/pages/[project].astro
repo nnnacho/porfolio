@@ -11,7 +11,7 @@ const info = PROJECTS.find(x => x.id == project)
             <h1
         class="text-white text-5xl font-bold flex flex-col gap-x-4 pb-10 items-center">
         {info.tittle}</h1>
-        <img class="rounded-t-lg" src={info.image} alt="" />
+        <img class="rounded-t-lg" src={info.image} alt="" transition:name={info.id} />
         <h2 class="text-white text-3xl font-bold py-5 items-start">Descripción</h2>
         <p class="text-left rtl:text-right text-gray-300 opacity-90 dark:text-gray-400">
             {info.descriptioncomplete}
