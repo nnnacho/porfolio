@@ -2,6 +2,7 @@
 
 import "@fontsource-variable/onest";
 import { ViewTransitions } from 'astro:transitions';
+import Footer from "../components/Footer.astro";
 
 interface Props {
   title: string;
@@ -27,6 +28,7 @@ const { description, title } = Astro.props;
   <body>
 	<div class="fixed-background"></div>
     <slot />
+    <Footer />
   </body>
 </html>
 <style is:global>
