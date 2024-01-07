@@ -13,46 +13,70 @@ if (!info) {
 ---
 
 <Layout title={`Proyecto ${info.tittle}`} description="proyectos">
-  <main>
+  <main class="py-20">
     <section class="w-full lg:w-[780px] mx-auto sm:px-10 px-6">
       <h1
         class="text-white text-5xl font-bold flex flex-col gap-x-4 pb-10 items-center">
         {info.tittle}
       </h1>
-
       <img
         class="rounded-lg"
         src={info.image}
         alt=""
         transition:name={info.id}
       />
-      <h2 class="text-white text-3xl font-bold py-5 items-start">
-        Descripción
-      </h2>
-      <p
-        class="text-left rtl:text-right text-gray-300 opacity-90 dark:text-gray-400">
-        {info.descriptioncomplete}
-      </p>
-      <h2 class="text-white text-3xl font-bold py-5">
-        Tecnologías
-      </h2>
-      <ul class="gap-x-2 flex mb-2">
-        {
-          info.tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-lg text-[10px] lg:text-md font-medium ${tag.class} py-1 px-2 border border-white/10 flex  items-center`}>
-                <tag.icon class="size-6" />
-                {tag.name}
-              </span>
-            </li>
-          ))
-        }
-      </ul>
+      <div class="mt-10">
+        <h2 class="text-white text-3xl font-bold items-start mb-2">
+          Descripción
+        </h2>
+        <p
+          class="text-left rtl:text-right text-gray-300 opacity-90 dark:text-gray-400">
+          {info.descriptioncomplete}
+        </p>
+      </div>
+      <div class="py-5">
+        <h2 class="text-white text-3xl font-bold py-5">Tecnologías</h2>
+        <ul class="gap-x-2 flex mb-2">
+          {
+            info.tags.map((tag) => (
+              <li>
+                <span
+                  class={`flex gap-x-2 rounded-lg text-[8px] xl:text-[14px] lg:text-[12px] ${tag.class} py-1 px-2 border border-white/10 flex  items-center`}>
+                  <tag.icon class="size-6" />
+                  {tag.name}
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="py-5">
+        <h2 class="text-white text-3xl font-bold py-5 items-start mb-2">
+          Lugar / Empresa
+        </h2>
+        <p
+          class="text-left rtl:text-right text-gray-300 opacity-90 dark:text-gray-400">
+          Liceo Saltos Del Laja, Cabrero, Chile.
+        </p>
+      </div>
       <a
+        class="flex items-center justify-center w-32 px-5 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border rounded-lg gap-x-2  dark:hover:bg-gray-800 dark:bg-gray-900 hover:bg-gray-100 dark:text-gray-200 dark:border-gray-700"
         href="/#proyectos"
-        class="py-3 mt-5 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-blue-900 dark:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-        Volver
+        >
+        <svg
+          class="w-5 h-5 rtl:rotate-180"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"></path>
+        </svg>
+        <span>Volver</span>
       </a>
     </section>
   </main>
