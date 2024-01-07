@@ -21,7 +21,7 @@ if (!info) {
       </h1>
 
       <img
-        class="rounded-t-lg"
+        class="rounded-lg"
         src={info.image}
         alt=""
         transition:name={info.id}
@@ -33,27 +33,27 @@ if (!info) {
         class="text-left rtl:text-right text-gray-300 opacity-90 dark:text-gray-400">
         {info.descriptioncomplete}
       </p>
-      
+      <h2 class="text-white text-3xl font-bold py-5">
+        Tecnologías
+      </h2>
+      <ul class="gap-x-2 flex mb-2">
+        {
+          info.tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-lg text-[10px] lg:text-md font-medium ${tag.class} py-1 px-2 border border-white/10 flex  items-center`}>
+                <tag.icon class="size-6" />
+                {tag.name}
+              </span>
+            </li>
+          ))
+        }
+      </ul>
       <a
-      href="/#proyectos"
-        class="text-white mt-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        href="/#proyectos"
+        class="py-3 mt-5 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-blue-900 dark:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
         Volver
-    </a>
-      <section></section>
+      </a>
     </section>
-    <section class="text-gray-600 body-font">
-        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-          <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
-          <div class="text-center lg:w-2/3 w-full">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Microdosing synth tattooed vexillologist</h1>
-            <p class="mb-8 leading-relaxed">Meggings kinfolk echo park stumptown DIY, kale chips beard jianbing tousled. Chambray dreamcatcher trust fund, kitsch vice godard disrupt ramps hexagon mustache umami snackwave tilde chillwave ugh. Pour-over meditation PBR&amp;B pickled ennui celiac mlkshk freegan photo booth af fingerstache pitchfork.</p>
-            <div class="flex justify-center">
-              <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-              <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
-            </div>
-          </div>
-        </div>
-      </section>
   </main>
-  
 </Layout>

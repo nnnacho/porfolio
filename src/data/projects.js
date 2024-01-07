@@ -1,6 +1,7 @@
 import NETIcon from "../components/icons/.NET.astro";
 import TailwindIcon from "../components/icons/TailwindCss.astro";
 import SqlSeverIcon from "../components/icons/SqlServer.astro";
+import JavaScript from "../components/icons/JavaScript.astro";
 const TAGS = {
     NET: {
       name: ".NET",
@@ -9,14 +10,19 @@ const TAGS = {
     },
     TAILWIND: {
       name: "Tailwind CSS",
-      class: "bg-[#003159] text-white",
+      class: "bg-[#003180] text-white",
       icon: TailwindIcon,
     },
     SqlServer: {
       name: "Sql Server",
-      class: "bg-gray-200 text-black",
+      class: "bg-gray-600 text-gray-100",
       icon: SqlSeverIcon,
     },
+    JavaScript: {
+      name: 'JavaScript',
+      class: 'bg-yellow-500 text-gray-800',
+      icon: JavaScript,
+    }
   };
 export const PROJECTS = [
     {
@@ -28,6 +34,6 @@ export const PROJECTS = [
       link: "http://ignacioarmijo-001-site1.anytempurl.com/",
       github: "https://github.com/nnnacho/LiceoSDL",
       image: "/imgs/GestorEscolar.webp",
-      tags: [TAGS.NET, TAGS.TAILWIND, TAGS.SqlServer],
+      tags: [TAGS.NET, TAGS.TAILWIND, TAGS.SqlServer, TAGS.JavaScript],
     }
   ];
