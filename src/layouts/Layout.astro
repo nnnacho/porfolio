@@ -21,6 +21,7 @@ const { description, title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <ViewTransitions />
     <title>{title}</title>
   </head>
@@ -63,3 +64,4 @@ const { description, title } = Astro.props;
     }
   }
 </style>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
