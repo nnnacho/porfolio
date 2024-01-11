@@ -19,8 +19,7 @@ import GitHubIcon from "../components/icons/GitHub.astro";
     <section class="body-font py-10">
       <div
         class="container mx-auto flex mb-10 px-5 md:flex-row flex-col items-center justify-center">
-        <div
-          class="lg:flex-grow flex flex-col items-center text-center">
+        <div class="lg:flex-grow flex flex-col items-center text-center">
           <h1
             class="title-font sm:text-4xl text-3xl mb-2 font-extrabold text-sky-300"
             transition:name={info.tittle}>
@@ -31,14 +30,12 @@ import GitHubIcon from "../components/icons/GitHub.astro";
           </h2>
         </div>
       </div>
-      <div
-        id="custom-controls-gallery"
-        class="relative mb-10">
+      <div id="custom-controls-gallery" class="relative mb-10">
         <div class="relative h-56 overflow-hidden rounded-lg md:h-96 mb-5">
-          <a href={info.github}  target="_blank" title="Repositorio GitHub">
+          <a href={info.github} target="_blank" title="Repositorio GitHub">
             <img
               src={info.image}
-              class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 hover:scale-110 transition-all hover:opacity-80"
+              class="absolute block duration-200 max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 hover:scale-110 transition-all hover:opacity-80"
               alt=""
               transition:name={info.id}
             />
@@ -50,7 +47,7 @@ import GitHubIcon from "../components/icons/GitHub.astro";
               info.tags.map((tag) => (
                 <li>
                   <span
-                    class={`flex gap-x-2 rounded-lg text-[8px] xl:text-[14px] lg:text-[12px] hover:scale-105 transition-all cursor-pointer ${tag.class} py-1 px-2 border border-white/10 flex  items-center`}>
+                    class={`flex gap-x-2 rounded-lg text-[8px] xl:text-[14px] lg:text-[12px] hover:scale-105 transition-all cursor-default ${tag.class} py-1 px-2 border border-white/10 flex  items-center`}>
                     <tag.icon class="size-6" />
                     {tag.name}
                   </span>
@@ -59,22 +56,19 @@ import GitHubIcon from "../components/icons/GitHub.astro";
             }
           </ul>
         </div>
-        <p class="leading-relaxed text-center" transition:name={info.description}>
+        <p
+          class="leading-relaxed text-center"
+          transition:name={info.description}>
           {info.descriptioncomplete}
         </p>
-        
       </div>
       <div class="flex justify-center">
-        <a class="relative border hover:border-sky-600 duration-500 group cursor-pointer text-sky-50  overflow-hidden h-10 w-32 rounded-md bg-sky-800 p-2 flex justify-center items-center font-extrabold hover:scale-110 transition-all" href="/#proyectos">
-          <div class="absolute z-10 w-48 h-48 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-sky-900 delay-150 group-hover:delay-75"></div>
-          <div class="absolute z-10 w-40 h-40 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-sky-800 delay-150 group-hover:delay-100"></div>
-          <div class="absolute z-10 w-32 h-32 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-sky-700 delay-150 group-hover:delay-150"></div>
-          <div class="absolute z-10 w-24 h-24 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-sky-600 delay-150 group-hover:delay-200"></div>
-          <div class="absolute z-10 w-16 h-16 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-sky-500 delay-150 group-hover:delay-300"></div>
-          <p class="z-10 text-gray-100">Volver</p>
+        <a
+          href="/#proyectos"
+          class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-200 transition-all duration-300 text-blue-800 hover:bg-blue-300 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-blue-900 dark:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+          Volver
         </a>
       </div>
-      
     </section>
   </main>
 </Layout>
