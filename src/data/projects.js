@@ -27,13 +27,15 @@ const TAGS = {
 export const PROJECTS = [
     {
       id:'gestor-escolar',
-      tittle: "Gestor Escolar",
+      tittle: "Sistema de Gestión Educativa",
       description:
         "Proyecto realizado con la arquitectura MVC en ASP.NET, Las principales funcionalidades del sistema son el ingreso de datos y la modificación de estos mediante formularios.",
       descriptioncomplete: "Desarrollé una aplicación web eficiente para optimizar la gestión administrativa del establecimiento, abarcando diversas áreas como el registro y actualización de datos. Implementé un mecanismo para el seguimiento de atrasos estudiantiles, permitiendo supervisar la asistencia. La aplicación también incorpora un sistema integral de permisos administrativos para el personal, agilizando su solicitud y registro, mejorando la eficiencia y transparencia.",
       link: "http://ignacioarmijo-001-site1.anytempurl.com/",
       github: "https://github.com/nnnacho/LiceoSDL",
       image: "/imgs/GestorEscolar.webp",
+      image2: "/imgs/test.webp",
+      company: "Liceo Saltos Del Laja",
       tags: [TAGS.NET, TAGS.TAILWIND, TAGS.SqlServer, TAGS.JavaScript],
-    }
+    },    
   ];

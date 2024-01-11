@@ -13,71 +13,87 @@ if (!info) {
 ---
 
 <Layout title={`Proyecto ${info.tittle}`} description="proyectos">
-  <main class="py-20">
-    <section class="w-full lg:w-[780px] mx-auto sm:px-10 px-6">
-      <h1
-        class="text-white text-5xl font-bold flex flex-col gap-x-4 pb-10 items-center">
-        {info.tittle}
-      </h1>
-      <img
-        class="rounded-lg"
-        src={info.image}
-        alt=""
-        transition:name={info.id}
-      />
-      <div class="mt-10">
-        <h2 class="text-white text-3xl font-bold items-start mb-2">
-          Descripción
-        </h2>
-        <p
-          class="text-left rtl:text-right text-gray-300 opacity-90 dark:text-gray-400">
-          {info.descriptioncomplete}
-        </p>
+  <main class="mt-10">
+    <section class="body-font">
+      <div
+        class="container mx-auto flex mb-10 px-5 md:flex-row flex-col items-center justify-center">
+        <div
+          class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+          <h1
+            class="title-font sm:text-4xl text-3xl mb-2 font-semibold"
+            transition:name={info.tittle}>
+            {info.tittle}<br class="hidden lg:inline-block" />
+          </h1>
+          <h2 class="title-font sm:text-3xl text-2xl mb-4 font-medium">
+            {info.company}
+          </h2>
+          <p class="mb-8 leading-relaxed" transition:name={info.description}>
+            {info.descriptioncomplete}
+          </p>
+          <div>
+            <ul class="gap-x-2 flex mb-2 items-center justify-center">
+              {
+                info.tags.map((tag) => (
+                  <li>
+                    <span
+                      class={`flex gap-x-2 rounded-lg text-[8px] xl:text-[14px] lg:text-[12px] ${tag.class} py-1 px-2 border border-white/10 flex  items-center`}>
+                      <tag.icon class="size-6" />
+                      {tag.name}
+                    </span>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="py-5">
-        <h2 class="text-white text-3xl font-bold py-5">Tecnologías</h2>
-        <ul class="gap-x-2 flex mb-2">
-          {
-            info.tags.map((tag) => (
-              <li>
-                <span
-                  class={`flex gap-x-2 rounded-lg text-[8px] xl:text-[14px] lg:text-[12px] ${tag.class} py-1 px-2 border border-white/10 flex  items-center`}>
-                  <tag.icon class="size-6" />
-                  {tag.name}
-                </span>
-              </li>
-            ))
-          }
-        </ul>
+      <div class="container mx-auto px-5 lg:px-32 mb-10">
+        <div class="-m-1 flex flex-wrap md:-m-2">
+          <div class="flex w-1/2 flex-wrap">
+            <div class="w-1/2 p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block h-full w-full rounded-lg object-cover object-center"
+                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" />
+            </div>
+            <div class="w-1/2 p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block h-full w-full rounded-lg object-cover object-center"
+                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp" />
+            </div>
+            <div class="w-full p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block h-full w-full rounded-lg object-cover object-center hover:scale-110 transition-all"
+                src={info.image2}/>
+            </div>
+          </div>
+          <div class="flex w-1/2 flex-wrap">
+            <div class="w-full p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block h-full w-full rounded-lg object-cover object-center"
+                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp" />
+            </div>
+            <div class="w-1/2 p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block h-full w-full rounded-lg object-cover object-center"
+                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp" />
+            </div>
+            <div class="w-1/2 p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block h-full w-full rounded-lg object-cover object-center"
+                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp" />
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="py-5">
-        <h2 class="text-white text-3xl font-bold py-5 items-start mb-2">
-          Lugar / Empresa
-        </h2>
-        <p
-          class="text-left rtl:text-right text-gray-300 opacity-90 dark:text-gray-400">
-          Liceo Saltos Del Laja, Cabrero, Chile.
-        </p>
-      </div>
-      <a
-        class="flex items-center justify-center w-32 px-5 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border rounded-lg gap-x-2  dark:hover:bg-gray-800 dark:bg-gray-900 hover:bg-gray-100 dark:text-gray-200 dark:border-gray-700"
-        href="/#proyectos"
-        >
-        <svg
-          class="w-5 h-5 rtl:rotate-180"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"></path>
-        </svg>
-        <span>Volver</span>
-      </a>
     </section>
+      <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com --> 
+
   </main>
 </Layout>
+
