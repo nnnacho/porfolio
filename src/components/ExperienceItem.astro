@@ -9,10 +9,10 @@ const { tittle, description, date, company } = Astro.props;
 ---
 
 <span
-  class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900"
+  class="absolute flex items-center justify-center w-6 h-6 bg-[#3da9fc] rounded-full -start-3 ring-8 ring-white"
 >
   <svg
-    class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300"
+    class="w-2.5 h-2.5 text-[#fffffe] dark:text-blue-300"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     fill="currentColor"
@@ -23,10 +23,10 @@ const { tittle, description, date, company } = Astro.props;
     ></path>
   </svg>
 </span>
-<h3 class="flex items-center mb-1 text-xl font-semibold text-[#fffffe]">
+<h3 class="flex items-center mb-1 text-xl font-semibold text-[#094067]">
   {tittle}
   <span
-    class="bg-blue-100 text[#eebbc3] text-sm font-medium me-2 px-2.5 py-0.5 rounded ms-2"
+    class="bg-[#ef4565] text-[#fffffe] text-sm font-medium me-2 px-2.5 py-0.5 rounded ms-2"
     >{company}</span
   >
 </h3>
@@ -35,7 +35,7 @@ const { tittle, description, date, company } = Astro.props;
   >{date}</time
 >
 <p
-  class="mb-4 text-base font-normal text-[#b8c1ec] opacity-80 dark:text-gray-400"
+  class="mb-4 text-base font-normal text-[#5f6c7b] opacity-80 dark:text-gray-400"
 >
   {description}
 </p>
