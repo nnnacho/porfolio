@@ -15,36 +15,45 @@ import Header from "../components/Header.astro";
 
 <Layout
   title="Porfolio de Ignacio Armijo Desarrollador y Programador Junior."
-  description="Contacta con Ignacio Armijo para crear tu pagina Web">
+  description="Contacta con Ignacio Armijo para crear tu pagina Web"
+>
   <Header />
   <main>
-    <section class="w-full lg:w-[780px] mx-auto pt-44 sm:px-10 md:px15 lg:px20 px-6"  id="sobre-mi">
+    <section
+      class="w-full lg:w-[780px] mx-auto pt-44 sm:px-10 md:px15 lg:px20 px-6"
+      id="sobre-mi"
+    >
       <img
         src="photo.jpg"
         class="rounded-full size-14 mb-5"
         alt="ignacio-photo"
       />
-      <h2 class="text-white text-4xl font-bold flex flex-col gap-x-4 pb-2 justify-items-start items-start">
+      <h2
+        class="text-[#fffffe] text-4xl font-bold flex flex-col gap-x-4 pb-2 justify-items-start items-start"
+      >
         Hola 👋
       </h2>
       <h1
-        class="text-white text-5xl font-bold flex flex-col gap-x-4 pb-10 justify-items-start items-start">
+        class="text-[#fffffe] text-5xl font-bold flex flex-col gap-x-4 pb-10 justify-items-start items-start"
+      >
         Soy Ignacio Armijo
         <a
           href="https://www.linkedin.com/in/ignacio-armijo-mansilla-23442026b"
           target="_blank"
           rel="noopener"
-          class="flex justify-center items-center">
+          class="flex justify-center items-center hover:scale-105 transition-all"
+        >
           <Badge />
         </a>
       </h1>
-      <h2 class="text-2xl opacity-80 text-wrap">
+      <h2 class="text-2xl text-[#b8c1ec] text-wrap">
         Analista Programador Junior, Desarrollador Web, tengo 21 años, soy de
         Bío-Bío, Chile y estoy en búsqueda de nuevos desafios!
       </h2>
       <nav class="flex gap-x-2">
         <SocialPill
-          href="https://www.linkedin.com/in/ignacio-armijo-mansilla-23442026b">
+          href="https://www.linkedin.com/in/ignacio-armijo-mansilla-23442026b"
+        >
           <LinkedInIcon class="size-6" />LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/nnnacho">
@@ -55,15 +64,21 @@ import Header from "../components/Header.astro";
         </SocialPill>
       </nav>
     </section>
-    <section class="w-full lg:w-[780px] mx-auto mt-24 sm:px-10 px-6" id="experiencia">
+    <section
+      class="w-full lg:w-[780px] mx-auto mt-24 sm:px-10 px-6"
+      id="experiencia"
+    >
       <Experience />
     </section>
-    <section class="w-full lg:w-[780px] mx-auto sm:px-10 px-6" id="proyectos" transition:persist>
+    <section
+      class="w-full lg:w-[780px] mx-auto sm:px-10 px-6"
+      id="proyectos"
+      transition:persist
+    >
       <Projects />
     </section>
     <section class="w-full lg:w-[780px] mx-auto sm:px-10" id="contacto">
       <Contact />
     </section>
   </main>
-
 </Layout>

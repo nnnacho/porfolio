@@ -6,7 +6,7 @@ const EXPERIENCE = [
     date: "Nov 2023 - Dic 2023",
     description:
       "Desarrollé un sistema de gestión para un establecimiento educacional con funcionalidades como: Administración de atrasos, gestión de días administrativos y descansos complementarios de los funcionarios, optimizando así procesos dentro de la institución.",
-    company: "Liceo Saltos Del Laja"
+    company: "Liceo Saltos Del Laja",
   },
 ];
 ---
@@ -15,28 +15,28 @@ const EXPERIENCE = [
   <div class="max-w-xl mx-auto">
     <div class="text-center">
       <div class="relative flex flex-col items-center">
-        <div
-          class="absolute hidden md:block mt-2 -top-14  text-[80px] text-gray-400 font-bold opacity-10">
-          Experiencia
-        </div>
-        <h1 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-sky-100 to-sky-600">
+        <h1
+          class="text-4xl font-extrabold text-transparent bg-clip-text bg-[#fffffe]"
+        >
           Experiencia Laboral
         </h1>
         <div class="flex mt-1 mb-10 overflow-hidden rounded w-14">
-          <div class="flex-1 h-2 bg-sky-200"></div>
-          <div class="flex-1 h-2 bg-sky-400"></div>
-          <div class="flex-1 h-2 bg-sky-600"></div>
+          <div class="flex-1 h-2 bg-[#eebbc3]"></div>
         </div>
       </div>
-      <p class="mb-16 text-base text-center text-gray-300 text-pretty">
-        Soy recién egresado y estoy en búsqueda de mi primer trabajo como desarrollador.
+      <p class="mb-16 text-base text-center text-[#b8c1ec] text-pretty">
+        Soy recién egresado y estoy en búsqueda de mi primer trabajo como
+        desarrollador.
       </p>
     </div>
   </div>
-  <ol class="relative border-s border-gray-200 dark:border-gray-700">     
-    {EXPERIENCE.map((exp) => <li class="mb-10 ms-6"><ExperienceItem {...exp} /></li> )}
+  <ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+      EXPERIENCE.map((exp) => (
+        <li class="mb-10 ms-6">
+          <ExperienceItem {...exp} />
+        </li>
+      ))
+    }
   </ol>
 </section>
-
-
-
