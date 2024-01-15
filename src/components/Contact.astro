@@ -1,20 +1,14 @@
-
 <section class="py-20">
   <div class="max-w-xl mx-auto">
     <div class="text-center">
       <div class="relative flex flex-col items-center">
-        <div
-          class="absolute hidden md:block mt-2 -top-14 text-[80px] text-gray-400 font-bold opacity-10">
-          Contacto
-        </div>
-        <h1
-          class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-sky-100 to-sky-600">
+        <h2
+          class="text-4xl font-extrabold text-[#094067] text-transparent bg-clip-text bg-[#fffffe]"
+        >
           Contáctame!
-        </h1>
+        </h2>
         <div class="flex mt-1 mb-10 overflow-hidden rounded w-14">
-          <div class="flex-1 h-2 bg-sky-200"></div>
-          <div class="flex-1 h-2 bg-sky-400"></div>
-          <div class="flex-1 h-2 bg-sky-600"></div>
+          <div class="flex-1 h-2 bg-[#3da9fc]"></div>
         </div>
       </div>
     </div>
@@ -22,15 +16,18 @@
   <div class="flex flex-col justify-center">
     <div class="relative py-1 sm:max-w-md sm:mx-auto mx-auto max-w-sm">
       <div
-        class="absolute inset-0 bg-sky-200 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 -rotate-6 sm:rounded-3xl rounded-3xl">
+        class="absolute inset-0 bg-[#90b4ce] shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 -rotate-6 sm:rounded-3xl rounded-3xl"
+      >
       </div>
       <div
-        class="text-white relative px-10 py-10 rounded-3xl bg-sky-600 shadow-lg">
+        class="text-white relative px-10 py-10 rounded-3xl bg-[#3da9fc] shadow-lg"
+      >
         <form
           class="space-y-4 text-center"
           action="https://formspree.io/f/xqkrakjj"
           method="POST"
-          id="form">
+          id="form"
+        >
           <input
             type="text"
             placeholder="Nombre"
@@ -53,7 +50,8 @@
             required></textarea>
           <button
             type="submit"
-            class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-200 transition-all duration-300 text-blue-800 hover:bg-blue-300 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-blue-900 dark:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+            class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-200 transition-all duration-300 text-blue-800 hover:bg-blue-300 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-blue-900 dark:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+          >
             Enviar mensaje
           </button>
         </form>
@@ -63,7 +61,7 @@
 </section>
 <script>
   import { Direction } from "astro:transitions/client";
-  import Toastify from 'toastify-js';
+  import Toastify from "toastify-js";
 
   const $form = document.querySelector("form");
   $form?.addEventListener("submit", handlesubmit);
@@ -81,19 +79,19 @@
     if (response.ok) {
       this.reset();
       Toastify({
-  text: "Mensaje enviado con éxito!",
-  duration: 4500,
-  destination: "https://github.com/apvarun/toastify-js",
-  newWindow: true,
-  close: true,
-  gravity: "top", // `top` or `bottom`
-  position: "right", // `left`, `center` or `right`
-  stopOnFocus: true, // Prevents dismissing of toast on hover
-  style: {
-    background: "linear-gradient(to right, #00b09b, #96c93d)",
-  },
-  onClick: function(){} // Callback after click
-}).showToast();
+        text: "Mensaje enviado con éxito!",
+        duration: 4500,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        onClick: function () {}, // Callback after click
+      }).showToast();
     }
   }
 </script>

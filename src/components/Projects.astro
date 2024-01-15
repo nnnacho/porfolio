@@ -21,7 +21,7 @@ import { PROJECTS } from "../data/projects.js";
     <div
       class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100"
     >
-      <div class="flex flex-col justify-between p-4 leading-normal">
+      <div class="flex flex-col justify-between p-4 leading-normal mb-3">
         {
           PROJECTS.map(
             ({ tittle, image, description, link, github, tags, id }) => (
@@ -35,7 +35,7 @@ import { PROJECTS } from "../data/projects.js";
                 <div class="flex justify-end">
                   <a
                     class="group relative inline-flex items-center
-                    border border-[#094067] overflow-hidden rounded bg-[#3da9fc] px-8 py-3 text-white focus:outline-none focus:ring active:bg-indigo-500"
+                    border border-[#094067] overflow-hidden rounded bg-[#ef4565] px-8 py-3 text-white focus:outline-none focus:ring active:bg-indigo-500"
                     href={`/${id}`}
                   >
                     <span class="absolute -end-full transition-all group-hover:end-4">
