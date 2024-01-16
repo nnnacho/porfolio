@@ -28,7 +28,7 @@ import GitHubIcon from "../components/icons/GitHub.astro";
             {info.tittle}<br class="hidden lg:inline-block" />
           </h1>
           <h2
-            class="title-font sm:text-3xl text-2xl mb-4 font-medium text-[#90b4ce]"
+            class="title-font sm:text-3xl text-2xl mb-4 font-medium text-[#094067]"
           >
             {info.company}
           </h2>
@@ -70,10 +70,30 @@ import GitHubIcon from "../components/icons/GitHub.astro";
       </div>
       <div class="flex justify-start">
         <a
+          class="group relative inline-flex items-center
+                    border border-[#094067] overflow-hidden rounded bg-[#ef4565] px-8 py-3 text-white focus:outline-none focus:ring active:bg-indigo-500"
           href="/#proyectos"
-          class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-200 transition-all duration-300 text-blue-800 hover:bg-blue-300 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-blue-900 dark:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
         >
-          Volver
+          <span class="absolute -start-full transition-all group-hover:start-4">
+            <svg
+              class="h-5 w-5 rotate-180"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </span>
+          <span
+            class="text-sm font-medium text-[#fffffe] transition-all group-hover:ml-4"
+          >
+            Volver
+          </span>
         </a>
       </div>
     </section>
