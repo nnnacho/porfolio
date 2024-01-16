@@ -22,10 +22,16 @@ import { PROJECTS } from "../data/projects.js";
           PROJECTS.map(
             ({ tittle, image, description, link, github, tags, id }) => (
               <>
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#094067] dark:text-white">
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-[#094067] dark:text-white"
+                  transition:name={tittle}
+                >
                   {tittle}
                 </h5>
-                <p class="mb-3 font-normal text-[#5f6c7b] dark:text-gray-400">
+                <p
+                  class="mb-3 font-normal text-[#5f6c7b] dark:text-gray-400"
+                  transition:name={description}
+                >
                   {description}
                 </p>
                 <div class="flex justify-end">
