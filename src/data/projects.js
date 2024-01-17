@@ -7,32 +7,32 @@ import HTMLIcon from "../components/icons/HTML.astro"
 export const TAGS = {
     NET: {
       name: ".NET",
-      class: "bg-[#fffffe] border border-gray-900 text-[#094067] font-bold",
+      class: "border border-gray-900 text-[#094067] font-bold",
       icon: NETIcon,
     },
     TAILWIND: {
       name: "Tailwind CSS",
-      class: "bg-[#fffffe] border border-gray-900 text-[#094067] font-bold",
+      class: "border border-gray-900 text-[#094067] font-bold",
       icon: TailwindIcon,
     },
     SqlServer: {
       name: "Sql Server",
-      class: "bg-[#fffffe] border border-gray-900 text-[#094067] font-bold",
+      class: "border border-gray-900 text-[#094067] font-bold",
       icon: SqlSeverIcon,
     },
     JavaScript: {
       name: 'JavaScript',
-      class: 'bg-[#fffffe] border border-gray-900 text-[#094067] font-bold',
+      class: 'border border-gray-900 text-[#094067] font-bold',
       icon: JavaScript,
     },
     Astro:{
       name: 'Astro',
-      class: 'bg-[#fffffe] border border-gray-900 text-[#094067] font-bold',
+      class: 'border border-gray-900 text-[#094067] font-bold',
       icon: AstroIcono,
     },
     HTML:{
       name: 'HTML 5',
-      class: 'bg-[#fffffe] border border-gray-900 text-[#094067] font-bold',
+      class: 'border border-gray-900 text-[#094067] font-bold',
       icon: HTMLIcon,
     }
   };
