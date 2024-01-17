@@ -1,27 +1,39 @@
-import NETIcon from "../components/icons/.NET.astro";
+import NETIcon from "../components/icons/NET.astro";
 import TailwindIcon from "../components/icons/TailwindCss.astro";
 import SqlSeverIcon from "../components/icons/SqlServer.astro";
 import JavaScript from "../components/icons/JavaScript.astro";
-const TAGS = {
+import AstroIcono from "../components/icons/AstroIcon.astro";
+import HTMLIcon from "../components/icons/HTML.astro"
+export const TAGS = {
     NET: {
       name: ".NET",
-      class: "bg-purple-500 text-white",
+      class: "bg-[#fffffe] border border-gray-900 text-[#094067] font-bold",
       icon: NETIcon,
     },
     TAILWIND: {
       name: "Tailwind CSS",
-      class: "bg-[#003180] text-white",
+      class: "bg-[#fffffe] border border-gray-900 text-[#094067] font-bold",
       icon: TailwindIcon,
     },
     SqlServer: {
       name: "Sql Server",
-      class: "bg-gray-600 text-gray-100",
+      class: "bg-[#fffffe] border border-gray-900 text-[#094067] font-bold",
       icon: SqlSeverIcon,
     },
     JavaScript: {
       name: 'JavaScript',
-      class: 'bg-yellow-500 text-gray-800',
+      class: 'bg-[#fffffe] border border-gray-900 text-[#094067] font-bold',
       icon: JavaScript,
+    },
+    Astro:{
+      name: 'Astro',
+      class: 'bg-[#fffffe] border border-gray-900 text-[#094067] font-bold',
+      icon: AstroIcono,
+    },
+    HTML:{
+      name: 'HTML 5',
+      class: 'bg-[#fffffe] border border-gray-900 text-[#094067] font-bold',
+      icon: HTMLIcon,
     }
   };
 export const PROJECTS = [
@@ -39,3 +51,9 @@ export const PROJECTS = [
       tags: [TAGS.NET, TAGS.TAILWIND, TAGS.SqlServer, TAGS.JavaScript],
     }, 
   ];
+  export const TECH = [
+    {
+      id:'ignacio',
+      tags: [TAGS.NET, TAGS.TAILWIND, TAGS.SqlServer, TAGS.JavaScript, TAGS.Astro, TAGS.HTML]
+    }
+  ]
