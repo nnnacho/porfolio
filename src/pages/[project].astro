@@ -3,7 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import { PROJECTS } from "../data/projects.js";
 import { InferencePriority, resolveTypeReferenceDirective } from "typescript";
 export function getStaticPaths() {
-  return [{ params: { project: "gestor-escolar" } }];
+  return [
+    { params: { project: "gestor-escolar" } },
+    //aqui debe las ids de los demás proyectos
+  ];
 }
 const { project } = Astro.params;
 const info = PROJECTS.find((x) => x.id == project);

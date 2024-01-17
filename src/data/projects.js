@@ -49,7 +49,8 @@ export const PROJECTS = [
       image2: "/imgs/test.webp",
       company: "Liceo Saltos Del Laja",
       tags: [TAGS.NET, TAGS.TAILWIND, TAGS.SqlServer, TAGS.JavaScript],
-    }, 
+    },
+    
   ];
   export const TECH = [
     {
