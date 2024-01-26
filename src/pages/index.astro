@@ -26,16 +26,28 @@ import TechStack from "../components/TechStack.astro";
     >
       <img
         src="photo.jpg"
-        class="rounded-full size-14 mb-5 animate__animated animate__backInLeft"
+        class="rounded-full size-14 mb-5"
         alt="ignacio-photo"
       />
       <h2
-        class="text-[#094067] text-4xl font-bold flex flex-col gap-x-4 pb-2 justify-items-start animate__animated animate__fadeInRight"
+        class="text-[#094067] text-4xl font-bold flex flex-row gap-x-4 pb-2 items-center"
       >
-        Hola 👋
+        Hola
+        <picture class="animate__animated animate__fadeInUp">
+          <source
+            srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.webp"
+            type="image/webp"
+          />
+          <img
+            src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.gif"
+            alt="👋"
+            width="32"
+            height="32"
+          />
+        </picture>
       </h2>
       <h1
-        class="text-[#094067] text-5xl font-bold flex flex-col gap-x-4 pb-10 justify-items-start items-start animate__animated animate__fadeInLeft"
+        class="text-[#094067] text-5xl font-bold flex flex-col gap-x-4 pb-10 justify-items-start items-start"
       >
         Soy Ignacio Armijo
         <a
@@ -47,9 +59,7 @@ import TechStack from "../components/TechStack.astro";
           <Badge />
         </a>
       </h1>
-      <h2
-        class="text-2xl text-[#5f6c7b] text-wrap animate__animated animate__fadeInRight"
-      >
+      <h2 class="text-2xl text-[#5f6c7b] text-wrap">
         <span class="text-[#3da9fc]">Programador Junior</span> y Desarrollador Web
         de 21 años, perteneciente a la región del Bío-Bío, Chile. <span
           class="text-[#ef4565]"
