@@ -4,7 +4,14 @@ import SqlSeverIcon from "../components/icons/SqlServer.astro";
 import JavaScript from "../components/icons/JavaScript.astro";
 import AstroIcono from "../components/icons/AstroIcon.astro";
 import HTMLIcon from "../components/icons/HTML.astro"
+import TypeScriptIcon from "../components/icons/TypeScript.astro"
+
 export const TAGS = {
+  TypeScript: {
+    name: "TypeScript",
+    class: "border border-gray-900 text-[#094067] font-bold",
+    icon: TypeScriptIcon,
+  },
     NET: {
       name: ".NET",
       class: "border border-gray-900 text-[#094067] font-bold",
@@ -37,6 +44,18 @@ export const TAGS = {
     }
   };
 export const PROJECTS = [
+  {
+    id:'gralla',
+    tittle:'Gralla',
+    description: 'Página web para grabar la videos y audios de la computadora mediante JavaScript',
+    descriptioncomplete: 'La idea de este proyecto nace desde la API de MediaStream Recording API, por su facilidad para grabar y descargar videos del usuario, me pareció un proyecto interesante ya que muchas veces tengo que recurrir a un programa de desktop para grabar la pantalla o alguna ventana de mi navegador y con esta API se hace todo mas fácil. En la página se puede grabar la pantalla, audios desde el micrófono, videos de la camara y algunas combinaciones de estas funcionalidades.',
+    link: 'https://gralla.vercel.app/',
+    github: 'https://github.com/nnnacho/Gralla',
+    image: '/imgs/gralla.webp',
+    company: 'Proyecto Personal',
+    tags: [TAGS.TAILWIND, TAGS.JavaScript, TAGS.Astro, TAGS.TypeScript ]
+
+  },
     {
       id:'gestor-escolar',
       tittle: "Sistema de Gestión Educativa",
@@ -46,10 +65,10 @@ export const PROJECTS = [
       link: "http://ignacioarmijo-001-site1.anytempurl.com/",
       github: "https://github.com/nnnacho/LiceoSDL",
       image: "/imgs/GestorEscolar.webp",
-      image2: "/imgs/test.webp",
       company: "Liceo Saltos Del Laja",
       tags: [TAGS.NET, TAGS.TAILWIND, TAGS.SqlServer, TAGS.JavaScript],
     },
+    
     
   ];
   export const TECH = [
