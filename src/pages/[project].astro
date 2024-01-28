@@ -14,8 +14,6 @@ const info = PROJECTS.find((x) => x.id == project);
 if (!info) {
   return Astro.redirect("Index ");
 }
-import SocialPill from "../components/SocialPill.astro";
-import GitHubIcon from "../components/icons/GitHub.astro";
 ---
 
 <Layout title={`Proyecto ${info.tittle}`} description="proyectos">
@@ -95,7 +93,6 @@ import GitHubIcon from "../components/icons/GitHub.astro";
           </span>
           <span
             class="text-sm font-medium text-[#fffffe] transition-all group-hover:ml-4"
-            transition:name="toback"
           >
             Volver
           </span>
