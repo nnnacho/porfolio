@@ -12,7 +12,7 @@ const { description, title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -24,7 +24,7 @@ const { description, title } = Astro.props;
     <title>{title}</title>
   </head>
 
-  <body>
+  <body class="bg-[#fffffe] dark:bg-[#0f0e17]">
     <slot />
     <Footer />
     <style is:global>
@@ -41,7 +41,6 @@ const { description, title } = Astro.props;
         flex-direction: column;
         justify-content: center;
         min-height: 100vh;
-        background: #fffffe;
       }
       @media (prefers-reduced-motion: reduce) {
         html {

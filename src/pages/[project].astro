@@ -24,13 +24,13 @@ if (!info) {
       >
         <div class="lg:flex-grow flex flex-col items-center text-center">
           <h1
-            class="title-font sm:text-4xl text-3xl font-extrabold text-[#094067]"
+            class="title-font sm:text-4xl text-3xl font-extrabold text-[#094067] dark:text-[#fffffe]"
             transition:name={info.tittle}
           >
             {info.tittle}<br class="hidden lg:inline-block" />
           </h1>
           <h2
-            class="title-font sm:text-3xl text-2xl mb-4 font-medium text-[#094067]"
+            class="title-font sm:text-3xl text-2xl mb-4 font-medium text-[#094067] dark:text-[#fffffe]"
           >
             {info.company}
           </h2>
@@ -53,7 +53,7 @@ if (!info) {
               info.tags.map((tag) => (
                 <li>
                   <span
-                    class={`gap-x-2 rounded-lg text-[8px] xl:text-[14px] lg:text-[12px] hover:scale-105 transition-all cursor-default bg-[#fffffe]   text-[#094067] font-bold py-1 px-2 border flex  items-center`}
+                    class={`gap-x-2 rounded-lg text-[8px] xl:text-[14px] lg:text-[12px] hover:scale-105 transition-all cursor-default text-[#094067] dark:text-[#fffffe]  py-1 px-2 border flex  items-center`}
                   >
                     <tag.icon class="size-6" />
                     {tag.name}
@@ -64,7 +64,7 @@ if (!info) {
           </ul>
         </div>
         <p
-          class="leading-relaxed text-start text-[#5f6c7b] text-pretty"
+          class="leading-relaxed text-start text-[#5f6c7b] text-pretty dark:text-[#a7a9be]"
           transition:name={info.description}
         >
           {info.descriptioncomplete}
@@ -73,7 +73,7 @@ if (!info) {
       <div class="flex justify-start">
         <a
           class="group relative inline-flex items-center
-                    border border-[#094067] overflow-hidden rounded bg-[#ef4565] px-8 py-3 text-white focus:outline-none focus:ring active:bg-indigo-500"
+                     overflow-hidden rounded bg-[#ef4565] px-8 py-3 dark:bg-[#e53170] text-white focus:outline-none focus:ring"
           href="/#proyectos"
         >
           <span class="absolute -start-full transition-all group-hover:start-4">

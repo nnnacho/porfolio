@@ -6,9 +6,11 @@ import { PROJECTS } from "../data/projects.js";
   <div class="max-w-xl mx-auto mb-12">
     <div class="text-center">
       <div class="relative flex flex-col items-center">
-        <h2 class="text-4xl font-extrabold text-[#094067]">Proyectos</h2>
+        <h2 class="text-4xl font-extrabold text-[#094067] dark:text-[#fffffe]">
+          Proyectos
+        </h2>
         <div class="flex mt-1 mb-10 overflow-hidden rounded w-14">
-          <div class="flex-1 h-2 bg-[#3da9fc]"></div>
+          <div class="flex-1 h-2 bg-[#3da9fc] dark:bg-[#ff8906]"></div>
         </div>
       </div>
     </div>
@@ -16,17 +18,17 @@ import { PROJECTS } from "../data/projects.js";
   {
     PROJECTS.map(({ tittle, image, description, link, github, tags, id }) => (
       <div class="flex justify-center items center mb-8">
-        <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 hover:scale-105 transition-all">
+        <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 hover:scale-105 transition-all dark:bg-[#fffffe]">
           <div class="flex flex-col justify-between p-4 leading-normal mb-3">
             <>
               <h5
-                class="mb-2 text-2xl font-bold tracking-tight text-[#094067] dark:text-white"
+                class="mb-2 text-2xl font-bold tracking-tight text-[#094067] dark:text-[#0f0e17] "
                 transition:name={tittle}
               >
                 {tittle}
               </h5>
               <p
-                class="mb-3 font-normal text-[#5f6c7b] dark:text-gray-400"
+                class="mb-3 font-normal text-[#5f6c7b] dark:text-[#2e2f3e]"
                 transition:name={description}
               >
                 {description}
@@ -34,7 +36,7 @@ import { PROJECTS } from "../data/projects.js";
               <div class="flex justify-end">
                 <a
                   class="group relative inline-flex items-center
-                    border border-[#094067] overflow-hidden rounded bg-[#ef4565] px-8 py-3 text-white focus:outline-none focus:ring active:bg-indigo-500"
+                    border border-[#094067] overflow-hidden rounded bg-[#ef4565] dark:bg-[#e53170] px-8 py-3 text-white focus:outline-none focus:ring active:bg-indigo-500"
                   href={`/${id}`}
                 >
                   <span class="absolute -end-full transition-all group-hover:end-4">

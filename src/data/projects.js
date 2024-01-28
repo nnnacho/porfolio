@@ -9,37 +9,37 @@ import TypeScriptIcon from "../components/icons/TypeScript.astro"
 export const TAGS = {
   TypeScript: {
     name: "TypeScript",
-    class: "border border-gray-900 text-[#094067] font-bold",
+    class: "border border-gray-900 text-[#094067] dark:text-[#fffffe] dark:border-[#ffffe]",
     icon: TypeScriptIcon,
   },
     NET: {
       name: ".NET",
-      class: "border border-gray-900 text-[#094067] font-bold",
+      class: "border border-gray-900 text-[#094067] dark:text-[#fffffe] dark:border-[#fffffe]",
       icon: NETIcon,
     },
     TAILWIND: {
       name: "Tailwind CSS",
-      class: "border border-gray-900 text-[#094067] font-bold",
+      class: "border border-gray-900 text-[#094067] dark:text-[#fffffe] dark:border-[#fffffe]",
       icon: TailwindIcon,
     },
     SqlServer: {
       name: "Sql Server",
-      class: "border border-gray-900 text-[#094067] font-bold",
+      class: "border border-gray-900 text-[#094067] dark:text-[#fffffe] dark:border-[#fffffe]",
       icon: SqlSeverIcon,
     },
     JavaScript: {
       name: 'JavaScript',
-      class: 'border border-gray-900 text-[#094067] font-bold',
+      class: 'border border-gray-900 text-[#094067] dark:text-[#fffffe] dark:border-[#fffffe]',
       icon: JavaScript,
     },
     Astro:{
       name: 'Astro',
-      class: 'border border-gray-900 text-[#094067] font-bold',
+      class: 'border border-gray-900 text-[#094067] dark:text-[#fffffe] dark:border-[#fffffe]',
       icon: AstroIcono,
     },
     HTML:{
       name: 'HTML 5',
-      class: 'border border-gray-900 text-[#094067] font-bold',
+      class: 'border border-gray-900 text-[#094067] dark:text-[#fffffe] dark:border-[#fffffe]',
       icon: HTMLIcon,
     }
   };

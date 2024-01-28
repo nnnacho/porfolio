@@ -9,10 +9,10 @@ const { tittle, description, date, company } = Astro.props;
 ---
 
 <span
-  class="absolute flex items-center justify-center w-6 h-6 bg-[#3da9fc] rounded-full -start-3 ring-8 ring-white"
+  class="absolute flex items-center justify-center w-6 h-6 bg-[#3da9fc] dark:bg-[#ff8906] rounded-full -start-3 ring-8 ring-white dark:ring-[#0f0e17]"
 >
   <svg
-    class="w-2.5 h-2.5 text-[#fffffe] dark:text-blue-300"
+    class="w-2.5 h-2.5 text-[#fffffe]"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     fill="currentColor"
@@ -23,19 +23,21 @@ const { tittle, description, date, company } = Astro.props;
     ></path>
   </svg>
 </span>
-<h3 class="flex items-center mb-1 text-xl font-semibold text-[#094067]">
+<h3
+  class="flex items-center mb-1 text-xl font-semibold text-[#094067] dark:text-[#fffffe]"
+>
   {tittle}
   <span
-    class="bg-[#ef4565] text-[#fffffe] text-sm font-medium me-2 px-2.5 py-0.5 rounded ms-2"
+    class="bg-[#ef4565] dark:bg-[#e53170] text-[#fffffe] text-sm font-medium me-2 px-2.5 py-0.5 rounded ms-2"
     >{company}</span
   >
 </h3>
 <time
-  class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+  class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-[#a7a9be]"
   >{date}</time
 >
 <p
-  class="mb-4 text-base font-normal text-[#5f6c7b] opacity-80 dark:text-gray-400"
+  class="mb-4 text-base font-normal text-[#5f6c7b] opacity-80 dark:text-[#a7a9be]"
 >
   {description}
 </p>
