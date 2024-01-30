@@ -2,6 +2,7 @@
 import "@fontsource-variable/onest";
 import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
 interface Props {
   title: string;
@@ -12,7 +13,7 @@ const { description, title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es" class="dark">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -20,16 +21,18 @@ const { description, title } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <script src="../data/index.js"></script>
     <ViewTransitions />
+
     <title>{title}</title>
   </head>
 
   <body class="bg-[#fffffe] dark:bg-[#0f0e17]">
+    <Header />
     <slot />
     <Footer />
     <style is:global>
       :root {
-        color-scheme: dark;
       }
       html {
         font-family: "Onest Variable", system-ui, sans-serif;
@@ -144,6 +147,5 @@ const { description, title } = Astro.props;
         height: 0;
       }
     </style>
-    <script src="../components/index.ts"></script>
   </body>
 </html>

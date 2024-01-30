@@ -77,3 +77,4 @@ export const PROJECTS = [
       tags: [TAGS.NET, TAGS.TAILWIND, TAGS.SqlServer, TAGS.JavaScript, TAGS.Astro, TAGS.HTML]
     }
   ]
+  

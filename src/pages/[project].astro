@@ -12,7 +12,15 @@ export function getStaticPaths() {
 const { project } = Astro.params;
 const info = PROJECTS.find((x) => x.id == project);
 if (!info) {
-  return Astro.redirect("Index ");
+  return Astro.redirect("index ");
+}
+
+if (localStorage.theme === "dark") {
+  console.log("hola negro");
+  document.documentElement.classList.add("dark");
+} else {
+  console.log("hola blanco");
+  document.documentElement.classList.remove("dark");
 }
 ---
 
