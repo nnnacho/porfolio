@@ -1,0 +1,66 @@
+---
+import AstroIcon from "./icons/AstroIcon.astro";
+import TailwindCss from "./icons/TailwindCss.astro";
+import TypeScript from "./icons/TypeScript.astro";
+---
+
+<div class="grid grid-cols-2 text-black text-center gap-6">
+  <article
+    class="h-[450px] rounded-2xl bg-[#fffffe] hover:scale-105 transition-all grid grid-row-2"
+  >
+    <div class="h-[200px] p-1">
+      <img src="../../public/imgs/test.webp" class="rounded-xl" alt="gralla" />
+    </div>
+    <div class="h-[250px] grid grid-row-6">
+      <div class="mt-3">
+        <ul class="gap-x-1 flex items-center justify-center">
+          <li>
+            <span
+              class="gap-x-2 rounded-lg text-[8px] xl:text-[14px] lg:text-[12px] hover:scale-105 transition-all cursor-default text-[#094067] py-1 px-1 border flex items-center"
+            >
+              <AstroIcon class:list={"size-6"} />
+              Astro
+            </span>
+          </li>
+          <li>
+            <span
+              class="gap-x-2 rounded-lg text-[8px] xl:text-[14px] lg:text-[12px] hover:scale-105 transition-all cursor-default text-[#094067] py-1 px-2 border flex items-center"
+            >
+              <TailwindCss class:list={"size-6"} />
+              Tailwind
+            </span>
+          </li>
+          <li>
+            <span
+              class="gap-x-2 rounded-lg text-[8px] xl:text-[14px] lg:text-[12px] hover:scale-105 transition-all cursor-default text-[#094067] py-1 px-2 border flex items-center"
+            >
+              <TypeScript class:list={"size-6"} />
+              TypeScript
+            </span>
+          </li>
+          <li>
+            <span
+              class="gap-x-2 rounded-lg text-[8px] xl:text-[14px] lg:text-[12px] hover:scale-105 transition-all cursor-default text-[#094067] py-1 px-2 border flex items-center"
+            >
+              <TypeScript class:list={"size-6"} />
+              TypeScript
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="row-span-4 p-2">
+        <p class="leading-relaxed text-center text-[#5f6c7b] text-pretty">
+          Gralla simplifica las grabaciones de pantalla, audio y video en el
+          navegador mediante la API MediaStream Recording.
+        </p>
+      </div>
+      <div></div>
+    </div>
+  </article>
+  <article class="rounded-2xl bg-[#fffffe] hover:scale-105 transition-all">
+  </article>
+  <article
+    class="col-span-2 bg-[#fffffe] h-[250px] rounded-2xl hover:scale-105 transition-all"
+  >
+  </article>
+</div>
